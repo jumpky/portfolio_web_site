@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест по информатике Филатов Алексей</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="header">
+        <a href="../index.html">Главная</a>
+        <span>/</span>
+
+        <a href="main.html">Тест</a>
+        <span>/</span>
+
+        <a href="../puzzle/puzzle.html">Угадайка</a>
+        <span>/</span>
+
+        <a href="../guesss_game/index.html">Угадай число</a>
+        <span>/</span>
+
+        <a href="../keyboard_game/start.html">Клавиатурный тренажер</a>
+    </div>
+    <h1>Тест по информатике (17 день)</h1>
+    <div id="result" style="display: none;">
+        Правильных ответов: <span id="score">0</span> из 5
+    </div>
+
+    <table border="1" id="q1">
+        <tr>
+            <td rowspan="3">1</td>
+            <td colspan="4" class="task">
+                Автоматическое устройство осуществило перекодировку информационного сообщения на русском языке,
+                первоначально записанного в 16-битном коде Unicode, в 8-битную кодировку КОИ-8. При этом информационное
+                сообщение уменьшилось на 480 бит. Какова длина сообщения в символах?
+            </td>
+        </tr>
+        <tr>
+            <td class="variant">1) 30</td>
+            <td class="variant">2) 60</td>
+            <td class="variant">3) 120</td>
+            <td class="variant">4) 480</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input id="a1" type="text" class="answer" placeholder="Ответ" />
+            </td>
+        </tr>
+    </table>
+
+    <table border="1" id="q2">
+        <tr>
+            <td rowspan="3">2</td>
+            <td colspan="4" class="task">
+                Для какого из перечисленных ниже значений числа X истинно высказывание (X > 2) ИЛИ НЕ (X > 5)?
+            </td>
+        </tr>
+        <tr>
+            <td class="variant">1) 1</td>
+            <td class="variant">2) 3</td>
+            <td class="variant">3) 6</td>
+            <td class="variant">4) 7</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input id="a2" type="text" class="answer" placeholder="Ответ" />
+            </td>
+        </tr>
+    </table>
+
+    <table border="1" id="q3">
+        <tr>
+            <td rowspan="3">3</td>
+            <td colspan="4" class="task">
+                В некоторой стране автомобильный номер длиной 7 символов составляется из латинских букв (всего используется 26 букв)
+                и десятичных цифр в любом порядке. Каждый символ кодируется одинаковым и минимально возможным количеством бит,
+                при этом размер кода всего номера составляет 42 бита. Сколько цифр используется в автомобильном номере?
+            </td>
+        </tr>
+        <tr>
+            <td class="variant">1) 1</td>
+            <td class="variant">2) 2</td>
+            <td class="variant">3) 3</td>
+            <td class="variant">4) 4</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input id="a3" type="text" class="answer" placeholder="Ответ" />
+            </td>
+        </tr>
+    </table>
+
+    <table border="1" id="q4">
+        <tr>
+            <td rowspan="3">4</td>
+            <td colspan="4" class="task">
+                Музыкальный фрагмент был записан в формате стерео (двухканальная запись), оцифрован и сохранен в виде файла без
+                использования сжатия данных. Размер полученного файла – 30 Мбайт. Затем тот же музыкальный фрагмент был записан
+                в формате моно, оцифрован с разрешением в 2 раза выше и той же частотой дискретизации, что и при первой записи, и
+                сохранен в виде файла без использования сжатия данных. Укажите размер полученного файла в Мбайт.
+            </td>
+        </tr>
+        <tr>
+            <td class="variant">1) 15</td>
+            <td class="variant">2) 30</td>
+            <td class="variant">3) 60</td>
+            <td class="variant">4) 120</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input id="a4" type="text" class="answer" placeholder="Ответ" />
+            </td>
+        </tr>
+    </table>
+
+    <table border="1" id="q5">
+        <tr>
+            <td rowspan="3">5</td>
+            <td colspan="4" class="task">
+                В ячейку B2 электронной таблицы записана формула =A1+$A$1. Какой вид приобретет эта формула, после того как ячейку B2
+                скопируют в ячейку C3? Примечание: знак $ обозначает абсолютную адресацию.
+            </td>
+        </tr>
+        <tr>
+            <td class="variant">1) =B2+$A$1</td>
+            <td class="variant">2) =B2+$B$2</td>
+            <td class="variant">3) =A2+$A$1</td>
+            <td class="variant">4) =B1+$A$1</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input id="a5" type="text" class="answer" placeholder="Ответ" />
+            </td>
+        </tr>
+    </table>
+
+    <button onclick="Check()">Проверить</button>
+
+    <p>Разработчик: <a href="https://github.com/jumpky/TESTS">Филатов Алексей</a></p>
+
+    <script src="script.js"></script>
+</body>
+</html>

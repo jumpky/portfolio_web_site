@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угадай число</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="header">
+        <a href="../index.html">Главная</a>
+        <span>/</span>
+
+        <a href="../tests_site/main.html">Тест</a>
+        <span>/</span>
+
+        <a href="../puzzle/puzzle.html">Угадайка</a>
+        <span>/</span>
+
+        <a href="index.html">Угадай число</a>
+        <span>/</span>
+
+        <a href="../keyboard_game/start.html">Клавиатурный тренажер</a>
+    </div>
+    <h1>Угадай число (1-100)</h1>
+    <p>Автор: Филатов Алексей ИС - 3.2</p>
+    <div id="game-container">
+        <input type="number" id="userInput" placeholder="Введите число" min="1" max="100">
+        <button id="submitBtn">Угадать</button>
+        <button id="newGameBtn">Новая игра</button>
+        <div id="output"></div>
+        <div id="attempts"></div>
+        <div id="image-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

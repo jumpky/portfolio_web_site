@@ -1,0 +1,60 @@
+h1{
+    text-align: center;
+}
+
+a{
+    color: black;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #f2f2f2; 
+    box-shadow: 3px 3px 5px #888888;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ddd; 
+}
+
+.task {
+    text-align: justify;
+    font-weight: bold;
+}
+
+.variant {
+    text-align: center;
+    font-size: 18px;
+}
+
+.answer {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; 
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s; /* Добавляем плавный переход для transform */
+}
+
+button:hover {
+    transform: scale(1.2); /* Увеличиваем размер при наведении */
+}
+
+button:active {
+    background-color: red; /* Меняем цвет на красный при нажатии */
+}
