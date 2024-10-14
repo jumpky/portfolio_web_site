@@ -1,53 +1,15 @@
-function playGuess2() {
-    var answer = parseInt(Math.random() * 100);
-    var playerNum = 1; //номер игрока, который сейчас ходит
+// script.js
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
 
-    while (true) {
-        var userAnswer = prompt('Ходит игрок ' + playerNum + '. Введите число от 0 до 100. Для выхода нажмите q');
-        if (userAnswer == 'q') {
-            break;
-        }
-        userAnswer = parseInt(userAnswer);
+themeToggle.addEventListener('click', () => { // Теперь используем 'click'
+    body.classList.toggle('dark');
+    localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+});
 
-        if (userAnswer > answer) {
-            alert('Ваш ответ слишком большой');
-        } else if (userAnswer < answer) {
-            alert('Ваш ответ слишком маленький');
-        } else if (userAnswer == answer) {
-            alert('Вы угадали! Выиграл игрок: ' + playerNum);
-            break;
-        } else {
-            alert('Необходимо ввести число!');
-        }
-
-        //делаем смену игрока
-        if (playerNum == 1) {
-            playerNum = 2;
-        } else {
-            playerNum = 1;
-        }
+document.addEventListener('DOMContentLoaded', () => {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+        body.classList.add('dark');
     }
-}
-
-function playGuess() {
-    var answer = parseInt(Math.random() * 100);
-
-    while (true) {
-        var userAnswer = prompt("Введите число от 0 до 100, для выхода нажмите q.");
-        if (userAnswer == "q") {
-            break;
-        }
-        userAnswer = parseInt(userAnswer);
-
-        if (userAnswer > answer) {
-            alert("Ваш ответ слишком большой.");
-        } else if (userAnswer < answer) {
-            alert("Ваш ответ слишком маленький.");
-        } else if (userAnswer == answer) {
-            alert("Вы угадали!");
-            break;
-        } else {
-            alert("Необходимо ввести число!");
-        }
-    }
-}
+});

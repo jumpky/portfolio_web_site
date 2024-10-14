@@ -1,57 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <title>Личный сайт студента МГИМО</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио Алексея Филатова</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/logo.png" type="image/x-icon"/>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
 </head>
 <body>
-    <div id="content">
-        <div id="header">
-            <a href="index.html">Главная</a>
-            <span>/</span>
-
-            <a href="tests_site/main.html">Тест</a>
-            <span>/</span>
-
-            <a href="puzzle/puzzle.html">Угадайка</a>
-            <span>/</span>
-
-            <a href="guesss_game/index.html">Угадай число</a>
-            <span>/</span>
-
-            <a href="keyboard_game/start.html">Клавиатурный тренажер</a>
-        </div>
-        <h1>Личный сайт студента МГИМО</h1>
-        <div id="center">
-            <img src="img/photo_cat.gif" alt="фотография">
-
-            <div id="box_text">
-                <p>
-                    Добрый день. Меня зовут <b>Филатов Алексей</b>.
-                    Я - <i>начинающий программист</i>. Я совсем недавно встал на этот путь,
-                    но уже успел написать свой первый сайт.
-                </p>
-
-                <p>
-                    В этом мне помог сайт Заярного Андрея Александровича:<a href="https://учисьдома.рф">Учисьдома.рф</a>
-                </p>
-
-                <p>
-                    На этом сайте вы сможете познакомится с сайтами которые я написал:
-                </p>
-                <a href="#">Главная</a>
-                <a href="#">Тест</a>
-                <a href="#">Угадай число</a>
-                <a href="#">Клавиатурный тренажер</a>
-                <br><br>
-
+    <header>
+        <nav class="container">
+            <div class="nav-content">
+                 <ul class="project-links">
+                    <li><a href="index.html" class="project-button active">Главная</a></li>
+                    <li><a href="tests_site/main.html" class="project-button">Тест</a></li>
+                    <li><a href="guess_game/index.html" class="project-button">Угадай число</a></li>
+                    <li><a href="keyboard_game/start.html" class="project-button">Клавиатурный тренажер</a></li>
+                    <li><a href="puzzle/puzzle.html" class="project-button">Угадайка</a></li>
+                </ul>
+                <button id="theme-toggle">
+                    <i class="sun-icon"></i> <i class="moon-icon"></i> 
+                </button> 
             </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Алексей Филатов</h1>
+                <p>Начинающий веб-разработчик</p>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-img">
+                        <img src="img/photo_cat.gif" alt="Фотография">
+                    </div>
+                    <div class="about-text">
+                        <p>Здравствуйте! Меня зовут Алексей Филатов. Я начинающий веб-разработчик, и я рад представить вам свое портфолио. Недавно начал свой путь в программировании, и уже создал несколько интересных проектов.</p>
+                        <p>Обучаюсь на сайте Заярного Андрея Александровича: <a href="https://учисьдома.рф" target="_blank" rel="noopener noreferrer">Учисьдома.рф</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Copyright © 2024 <a href="#">Алексей Филатов</a></p>
         </div>
-    </div>
-    <div id="footer">
-        Copyright © 2024 <a href="">Филатов Алексей</a>
-    </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
