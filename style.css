@@ -1,0 +1,218 @@
+:root {
+    --bg-color: #f7f7f7;
+    --text-color: #242424;
+    --accent-color: #40678a;
+    --link-hover-color: #6096B4;
+    --button-bg: #eee;
+    --button-text: var(--text-color);
+    --button-hover-bg: #ddd;
+    --button-active-bg: #6096B4; 
+    --button-active-text: #fff;
+    --box-shadow-color: rgba(0, 0, 0, 0.2);
+    --box-bg-color: rgba(255, 255, 255, 0.8);
+    --border-color: #ddd;
+}
+
+body.dark {
+    --bg-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent-color: #8cbbd3;
+    --link-hover-color: #a3d0e8;
+    --button-bg: #555;
+    --button-text: #eee;
+    --button-hover-bg: #333;
+    --button-active-bg: #8294C4;
+    --button-active-text: #fff;
+    --box-shadow-color: rgba(255, 255, 255, 0.2);
+    --box-bg-color: rgba(20, 20, 20, 0.8);
+    --border-color: #555;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+    display: flex;           
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header {
+    background-color: #545454;
+    padding: 1rem 0; 
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+
+.project-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    color: var(--button-text);
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    background-color: var(--button-bg);
+    box-shadow: 2px 2px 4px var(--box-shadow-color); /* Уменьшена тень */
+}
+
+
+.project-button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.project-button.active {
+    background-color: var(--button-active-bg);
+    color: var(--button-active-text);
+    box-shadow: inset 2px 2px 4px var(--box-shadow-color); /* Уменьшена внутренняя тень */
+    transform: translateY(-2px);
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.sun-icon,
+.moon-icon {
+    display: inline-block; /*  Отображаем обе иконки */
+}
+
+body:not(.dark) .moon-icon, /*  Скрываем луну в светлой теме */
+body.dark .sun-icon      /*  Скрываем солнце в темной теме */ {
+    display: none;
+}
+
+main {
+    flex: 1;  /*  main займет все доступное пространство */
+    padding: 2rem 0;
+}
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+
+.about {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.about-img {
+    width: 400px; /* Фиксированный размер */
+    max-width: 50%;
+    height: auto;
+  }
+
+.about-img img {
+    display: block;
+    width: 100%;
+    max-height: 600px; /* Ограничиваем максимальную высоту */
+    object-fit: cover;
+    border: 2px solid #bb86fc;
+    border-radius: 5px;
+  }
+
+
+
+
+.about-text {
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: var(--box-bg-color);
+    box-shadow: 2px 2px 4px var(--box-shadow-color);
+    color: var(--text-color);
+    flex: 1; /* Занимаем оставшееся пространство */
+    display: flex; /*  Flexbox для выравнивания текста */
+    flex-direction: column; /*  Расположение текста по вертикали */
+}
+
+
+.project-list ul {
+  list-style-type: disc;  /*  Маркированный список */
+  padding-left: 20px;    /*  Отступ слева для маркеров */
+}
+
+.project-list a {
+   color: var(--accent-color);
+}
+
+.project-list a:hover {
+    color: var(--link-hover-color);
+}
+
+
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column; /*  Вертикальное расположение на мобильных */
+        align-items: center;
+    }
+    .about-img {
+        margin-bottom: 1rem;
+        flex: 0 0 auto; /* Ширина определяется содержимым*/
+
+    }
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: color 0.3s ease; /*  Плавное изменение цвета */
+}
+
+footer {
+    background-color: #434445;
+    color: #a4a4a4;
+    text-align: center;
+    padding:  0;
+    font-size: 0.8rem;
+    margin-top: auto; /*  Ключевой момент: отступ сверху - auto */
+}

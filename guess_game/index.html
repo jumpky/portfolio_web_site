@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угадай число</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="nav-content">
+                <ul class="project-links">
+                    <li><a href="../index.html" class="project-button">Главная</a></li>
+                    <li><a href="../tests_site/main.html" class="project-button">Тест</a></li>
+                    <li><a href="index.html" class="project-button">Угадай число</a></li>
+                    <li><a href="../keyboard_game\index.html" class="project-button">Клавиатурный тренажер</a></li>
+                    <li><a href="../puzzle/puzzle.html" class="project-button">Угадайка</a></li>
+                </ul>
+                <button id="theme-toggle">
+                    <span class="sun-icon">☀️</span> <span class="moon-icon">🌙</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <h1>Угадай число (1-100)</h1>
+    <p>Автор: Филатов Алексей ИС - 3.2</p>
+    <div id="game-container">
+        <input type="number" id="userInput" placeholder="Введите число" min="1" max="100">
+        <button id="submitBtn">Угадать</button>
+        <button id="newGameBtn">Новая игра</button>
+        <div id="output"></div>
+        <div id="attempts"></div>
+        <div id="image-container"></div>
+    </div>
+    <script src="script.js"></script>
+
+    
+</body>
+<footer>
+    <div class="container">
+        <p>Copyright © 2024 <a href="https://github.com/jumpky/TESTS">Алексей Филатов</a></p>
+    </div>
+</footer>
+</html>

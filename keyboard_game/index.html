@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клавиатурный тренажер</title>
+    <link rel="stylesheet" href="main/css/styles.css">
+    <link rel="stylesheet" href="main/css/result.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="nav-content">
+                <ul class="project-links">
+                    <li><a href="../index.html" class="project-button">Главная</a></li>
+                    <li><a href="../tests_site/main.html" class="project-button">Тест</a></li>
+                    <li><a href="../guess_game/index.html" class="project-button">Угадай число</a></li>
+                    <li><a href="index.html" class="project-button">Клавиатурный тренажер</a></li>
+                    <li><a href="../puzzle/puzzle.html" class="project-button">Угадайка</a></li>
+                </ul>
+                <button id="theme-toggle">
+                    <span class="sun-icon">☀️</span> <span class="moon-icon">🌙</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="container">
+        <h1>Клавиатурный тренажер</h1>
+
+        <div class="settings">
+            <label for="mode">Режим:</label>
+            <select id="mode">
+                <option value="letters">Буквы</option>
+                <option value="words">Слова</option>
+                <option value="sentences">Предложения</option>
+                <option value="text">Текст</option>
+            </select>
+
+            <label for="language">Язык:</label>
+            <select id="language">
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
+            </select>
+
+            <label for="difficulty">Сложность:</label>
+            <select id="difficulty">
+                <option value="easy">Легкий</option>
+                <option value="medium">Средний</option>
+                <option value="hard">Сложный</option>
+            </select>
+
+            <label for="userInput">Введите текст:</label>
+            <textarea id="userInput" style="display: none;"></textarea>
+        </div>
+
+        <div class="game-container">
+            <div id="fallingItems"></div>
+            <div id="overlay"><span id="countdown"></span></div>
+            <div class="stats">
+                <div>Очки: <span id="score">0</span></div>
+                <div>WPM: <span id="wpm">0</span></div>
+                <div>Точность: <span id="accuracy">100%</span></div>
+            </div>
+        </div>
+
+        <button id="startButton">Старт</button>
+
+        <div id="resultContainer" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">×</span>
+                <h2>Результаты</h2>
+                <p id="resultMessage"></p>
+                <p>Очки: <span id="finalScore"></span></p>
+                <p>WPM: <span id="finalWpm"></span></p>
+                <p>Точность: <span id="finalAccuracy"></span></p>
+                <button id="closeButton">Новая игра</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Copyright © 2024 <a href="https://github.com/jumpky/TESTS">Алексей Филатов</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
